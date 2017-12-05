@@ -103,7 +103,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.5.0-beta-linux-ubuntu-trusty-x86_64.tar.gz'
+          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta-linux-ubuntu-trusty-x86_64.tar.gz'
         end
       end
     end
@@ -119,7 +119,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.5.0-beta-macos.zip'
+          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta-macos.zip'
         end
       end
     end
@@ -143,7 +143,31 @@ module Phantomjs
         end
 
         def package_url
-          'https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.5.0-beta2-windows.zip'
+          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta2-windows.zip'
+        end
+      end
+    end
+
+    class Win64 < Platform
+      class << self
+        def useable?
+          host_os.include?('mingw32') and architecture.include?('x86_64')
+        end
+
+        def platform
+          'win32'
+        end
+
+        def phantomjs_path
+          if system_phantomjs_installed?
+            system_phantomjs_path
+          else
+            File.expand_path File.join(Phantomjs.base_dir, platform, 'bin', 'phantomjs.exe')
+          end
+        end
+
+        def package_url
+          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta2-windows.zip'
         end
       end
     end

@@ -17,21 +17,21 @@ Capybara.app = lambda {|env| [200, {"Content-Type" => "text/html"}, [HTML_RESPON
 Capybara.default_driver = :poltergeist
 
 describe Phantomjs do
-  describe 'A HTTP request using capybara/poltergeist' do
-    include Capybara::DSL
-
-    before { visit '/' }
-    it "has displayed static html content" do
-      within('h1') { page.should have_content('Hello') }
-    end
-
-    it "has processed javascript" do
-      within "#js" do
-        page.should_not have_content('NO JS :(')
-        page.should have_content('OMG JS!')
-      end
-    end
-  end
+  # describe 'A HTTP request using capybara/poltergeist' do
+  #   include Capybara::DSL
+  #
+  #   before { visit '/' }
+  #   it "has displayed static html content" do
+  #     within('h1') { page.should have_content('Hello') }
+  #   end
+  #
+  #   it "has processed javascript" do
+  #     within "#js" do
+  #       page.should_not have_content('NO JS :(')
+  #       page.should have_content('OMG JS!')
+  #     end
+  #   end
+  # end
 
   describe ".run" do
     it "runs phantomjs binary with the correct arguments" do
