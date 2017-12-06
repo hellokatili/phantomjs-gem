@@ -50,16 +50,23 @@ module Phantomjs
         FileUtils.rm_rf temp_dir
         FileUtils.mkdir_p temp_dir
 
+        STDERR.puts '---------'
+        STDERR.puts temp_dir
+        STDERR.puts '---------'
+
         Dir.chdir temp_dir do
           unless system "curl -L --retry 5 -O #{package_url}" or system "wget -t 5 #{package_url}"
             raise "\n\nFailed to load phantomjs! :(\nYou need to have cURL or wget installed on your system.\nIf you have, the source of phantomjs might be unavailable: #{package_url}\n\n"
           end
-
+          STDERR.puts '..........'
+          STDERR.puts File.basename(package_url).split('.').last
+          STDERR.puts package_url.split('.').last
+          STDERR.puts '..........'
           case package_url.split('.').last
             when 'bz2'
               system "tar jxf #{File.basename(package_url)}"
             when 'gz'
-              system "tar zxf #{File.basename(package_url)}"
+              system "tar -zxvf #{File.basename(package_url)}"
             when 'zip'
               system "unzip #{File.basename(package_url)}"
             else
