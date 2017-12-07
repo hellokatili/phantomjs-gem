@@ -79,6 +79,7 @@ module Phantomjs
           # Move the extracted phantomjs build to $HOME/.phantomjs/version/platform
           if FileUtils.mv extracted_dir, File.join(Phantomjs.base_dir, platform)
             STDOUT.puts "\nSuccessfully installed phantomjs. Yay!"
+            STDOUT.puts "For Ubuntu binaries you need to install some dependencies: png, jpeg, webp, openssl, zlib, fontconfig, freetype and libicu"
           end
 
           if File.exist?(phantomjs_path) and not File.executable?(phantomjs_path)
@@ -110,7 +111,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta-linux-ubuntu-trusty-x86_64.tar.gz'
+          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta-linux-ubuntu-xenial-x86_64.tar.gz'
         end
       end
     end
