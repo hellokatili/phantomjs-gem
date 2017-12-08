@@ -111,7 +111,8 @@ module Phantomjs
         end
 
         def package_url
-          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta-linux-ubuntu-xenial-x86_64.tar.gz'
+          # 'https://lion.box.com/shared/static/gl85jw9fjys1rvy1g2kaww7aosd31wd0.gz' # Trusty
+          'https://lion.box.com/shared/static/9zol5tnwp1i4f6fs037440utwjeawhpx.tar' # Debian
         end
       end
     end
@@ -127,7 +128,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta-macos.zip'
+          'https://lion.box.com/shared/static/icwhrkitmj2sejl1ehnfwum9ru2b0frw.zip'
         end
       end
     end
@@ -151,7 +152,7 @@ module Phantomjs
         end
 
         def package_url
-          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta2-windows.zip'
+          'https://lion.box.com/shared/static/mud9ycuoh6cnxhhauzgqwg5i75qs7i1q.zip'
         end
       end
     end
@@ -175,7 +176,8 @@ module Phantomjs
         end
 
         def package_url
-          'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta2-windows.zip'
+          # 'https://cnpmjs.org/mirrors/phantomjs/phantomjs-2.5.0-beta2-windows.zip'
+          'https://lion.box.com/shared/static/mud9ycuoh6cnxhhauzgqwg5i75qs7i1q.zip'
         end
       end
     end
