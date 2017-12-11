@@ -114,8 +114,9 @@ module Phantomjs
 
         def package_url
           # 'https://lion.box.com/shared/static/gl85jw9fjys1rvy1g2kaww7aosd31wd0.gz' # Trusty
-          # 'https://lion.box.com/shared/static/9zol5tnwp1i4f6fs037440utwjeawhpx.tar' # Debian
-          'https://lion.box.com/shared/static/pm97kcojl9ubsd21zuyhud1wqu0moag9.tar' # Debian custom build
+          # 'https://lion.box.com/shared/static/pm97kcojl9ubsd21zuyhud1wqu0moag9.tar' # Debian custom build
+          'https://lion.box.com/shared/static/9zol5tnwp1i4f6fs037440utwjeawhpx.tar' # Debian
+
         end
       end
     end
