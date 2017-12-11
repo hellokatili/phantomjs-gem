@@ -4,8 +4,11 @@
 
 **DISCLAIMER: Alpha status, YMMV!**
 
-**Uses https://cnpmjs.org/downloads as mirror of https://bitbucket.org/ariya/phantomjs/downloads/ to ensure downloads won't fail due to Bitbuckets rate limits.**
+---
 
+**Uses https://lion.app.box.com as mirror of https://bitbucket.org/ariya/phantomjs/downloads/ to ensure downloads won't fail due to Bitbuckets rate limits. Added custom Linux binary for Debian.**
+
+---
 I am lazy as hell, and wanted to be able to install [PhantomJS](http://phantomjs.org) via Rubygems/Bundler when using [poltergeist](https://github.com/jonleighton/poltergeist).
 
 It keeps installations of phantomjs in `$HOME/.phantomjs/VERSION/PLATFORM`. When you call `Phantomjs.path`, it will return the path to the phantomjs executable in there. If that is not present, it will first fetch and
