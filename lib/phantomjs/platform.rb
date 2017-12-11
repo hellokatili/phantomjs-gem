@@ -67,6 +67,8 @@ module Phantomjs
               system "tar jxf #{File.basename(package_url)}"
             when 'gz'
               system "tar -zxvf #{File.basename(package_url)}"
+            when 'tar'
+              system "tar -xvf #{File.basename(package_url)}"
             when 'zip'
               system "unzip #{File.basename(package_url)}"
             else
